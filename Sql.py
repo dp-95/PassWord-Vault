@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # @Author: _dp95
-# @Date:   2020-08-23 17:18:28
 import mysql.connector
 
 connection_args = {
