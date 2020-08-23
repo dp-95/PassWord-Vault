@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 # @Author: _dp95
-import hashlib
-import base64
 from Crypto.Cipher import AES
 from Crypto.Hash import SHA
+
+import hashlib
+import base64
+import Crypto.Random
+
 
 IV_SIZE = 16    
 KEY_SIZE = 16
@@ -33,3 +36,7 @@ class EnCrypt:
 def get_hashed_pwd( salt, password ):
 	salt_password = password + str(salt)
 	return SHA.new(salt_password.encode()).hexdigest()
+
+def get_random_salt():
+    return Crypto.Random.get_random_bytes(16)
+    
