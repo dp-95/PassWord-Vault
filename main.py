@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 # @Author: _dp95
-# @Date:   2020-08-23 17:53:23
-
 import Cypher
 import Sql
 import os
