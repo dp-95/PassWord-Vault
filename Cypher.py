@@ -29,10 +29,6 @@ class EnCrypt:
         text = AES.new(self.key, AES.MODE_CFB, self.iv).decrypt(text[SALT_SIZE:])
         return  text
 
-    def p(self):
-        print("OK:)")
-        return
-
 def get_hashed_pwd( salt, password ):
 	salt_password = password + str(salt)
 	return SHA.new(salt_password.encode()).hexdigest()
