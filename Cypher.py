@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 # @Author: _dp95
-# @Date:   2020-08-23 17:08:50
 import hashlib
 import base64
 from Crypto.Cipher import AES
