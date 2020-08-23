@@ -209,9 +209,8 @@ def sign_up( ):
 	if password1!=password2:
 		print("Passwords do not match!!")
 		return
-	salt = Crypto.Random.get_random_bytes(16)
-	password = password1+str(salt)
-	password = SHA.new(password.encode()).hexdigest()
+	salt = Cypher.get_random_salt()
+	password = Cypher.get_hashed_pwd( salt, password1 )
 	val = (username,salt,password)
 	query = "insert into users values(%s,%s,%s);"
 	cursor.execute(query,val)
